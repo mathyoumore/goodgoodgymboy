@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :personal_records
+  resources :workouts
+  resources :set_of_exercises
+  resources :exercises
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
