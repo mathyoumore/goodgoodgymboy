@@ -1,0 +1,37 @@
+<%= form_for(@personal_record) do |f| %>
+  <% if @personal_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personal_record.errors.count, "error") %> prohibited this personal_record from being saved:</h2>
+
+      <ul>
+      <% @personal_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :exercise_id %><br>
+    <%= f.text_field :exercise_id %>
+  </div>
+  <div class="field">
+    <%= f.label :sets %><br>
+    <%= f.number_field :sets %>
+  </div>
+  <div class="field">
+    <%= f.label :repititions %><br>
+    <%= f.number_field :repititions %>
+  </div>
+  <div class="field">
+    <%= f.label :one_rep_max %><br>
+    <%= f.text_field :one_rep_max %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

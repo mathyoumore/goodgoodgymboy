@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Set Of Exercises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Exercise</th>
+      <th>Weight</th>
+      <th>Reps</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @set_of_exercises.each do |set_of_exercise| %>
+      <tr>
+        <td><%= set_of_exercise.exercise %></td>
+        <td><%= set_of_exercise.weight %></td>
+        <td><%= set_of_exercise.reps %></td>
+        <td><%= link_to 'Show', set_of_exercise %></td>
+        <td><%= link_to 'Edit', edit_set_of_exercise_path(set_of_exercise) %></td>
+        <td><%= link_to 'Destroy', set_of_exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Set of exercise', new_set_of_exercise_path %>

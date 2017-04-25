@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @personal_record.user %>
+</p>
+
+<p>
+  <strong>Exercise:</strong>
+  <%= @personal_record.exercise %>
+</p>
+
+<p>
+  <strong>Sets:</strong>
+  <%= @personal_record.sets %>
+</p>
+
+<p>
+  <strong>Repititions:</strong>
+  <%= @personal_record.repititions %>
+</p>
+
+<p>
+  <strong>One rep max:</strong>
+  <%= @personal_record.one_rep_max %>
+</p>
+
+<%= link_to 'Edit', edit_personal_record_path(@personal_record) %> |
+<%= link_to 'Back', personal_records_path %>
