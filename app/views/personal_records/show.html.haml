@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong User:
+  = @personal_record.user
+%p
+  %strong Exercise:
+  = @personal_record.exercise
+%p
+  %strong Sets:
+  = @personal_record.sets
+%p
+  %strong Repititions:
+  = @personal_record.repititions
+%p
+  %strong One rep max:
+  = @personal_record.one_rep_max
+= link_to 'Edit', edit_personal_record_path(@personal_record)
+|
+= link_to 'Back', personal_records_path

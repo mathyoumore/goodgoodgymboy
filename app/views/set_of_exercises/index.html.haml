@@ -1,0 +1,20 @@
+%p#notice= notice
+%h1 Listing Set Of Exercises
+%table
+  %thead
+    %tr
+      %th Exercise
+      %th Weight
+      %th Reps
+      %th{:colspan => "3"}
+  %tbody
+    - @set_of_exercises.each do |set_of_exercise|
+      %tr
+        %td= set_of_exercise.exercise
+        %td= set_of_exercise.weight
+        %td= set_of_exercise.reps
+        %td= link_to 'Show', set_of_exercise
+        %td= link_to 'Edit', edit_set_of_exercise_path(set_of_exercise)
+        %td= link_to 'Destroy', set_of_exercise, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Set of exercise', new_set_of_exercise_path

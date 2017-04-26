@@ -1,0 +1,31 @@
+= form_for(@personal_record) do |f|
+  - if @personal_record.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@personal_record.errors.count, "error")
+        prohibited this personal_record from being saved:
+      %ul
+        - @personal_record.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :user_id
+    %br/
+    = f.text_field :user_id
+  .field
+    = f.label :exercise_id
+    %br/
+    = f.text_field :exercise_id
+  .field
+    = f.label :sets
+    %br/
+    = f.number_field :sets
+  .field
+    = f.label :repititions
+    %br/
+    = f.number_field :repititions
+  .field
+    = f.label :one_rep_max
+    %br/
+    = f.text_field :one_rep_max
+  .actions
+    = f.submit

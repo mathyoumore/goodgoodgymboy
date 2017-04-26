@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Sets of exercises:
+  = @workout.sets_of_exercises
+%p
+  %strong User:
+  = @workout.user
+%p
+  %strong Date:
+  = @workout.date
+= link_to 'Edit', edit_workout_path(@workout)
+|
+= link_to 'Back', workouts_path
